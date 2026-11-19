@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ezo Kitchen &amp; Sushi Bar</title>
+    <!-- Google Fonts: Playpen Sans Thai & Shippori Mincho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai:wght@400;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sticky Header with Logo and Navbar -->
+    <header class="top-header">
+        <div class="header-inner story-header-inner">
+            <a href="index.html" class="logo">
+                <img src="ezo-logo.png" alt="Ezo Kitchen &amp; Sushi Bar Logo">
+            </a>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="drinks.html">Drinks</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="visit-reserve.html">Visit &amp; Reserve</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container (1312px Master Alignment) -->
+    <main class="story-container">
+
+        <!-- 1. Page Title & Intro -->
+        <section class="menu-intro-block contact-intro-block">
+            <h1 class="menu-main-title contact-main-title">Say Hello!</h1>
+            <div class="contact-subtitle-box">
+                <p>Questions about the menu, allergies, or private events? Call, email, or message us.</p>
+            </div>
+        </section>
+
+        <!-- Horizontal Rule -->
+        <hr class="story-divider contact-top-divider">
+
+        <!-- 2. Right-Aligned Pink Headline (Flush with right end of horizontal rule) -->
+        <section class="contact-right-row">
+            <div class="contact-neighbor-box">
+                <p>We love hearing from our neighbors.<br>Send a note, and we will reply within one<br>business day.</p>
+            </div>
+        </section>
+
+        <!-- 3. Left-Aligned Pink Contact Card (661 x 253) -->
+        <section class="contact-left-row">
+            <div class="contact-pink-card">
+                <div class="ruled-text-box contact-card-inner">
+                    <p><strong>Phone:</strong> (516) 555-0148</p>
+                    <p><strong>Email:</strong> hello@ezokitchen.com</p>
+                    <p><strong>Address:</strong> 58 Station Plaza,<br>Syosset, NY 11791</p>
+                    <p><strong>Instagram:</strong> @ezokitchen</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Right-Aligned Ruled Notes (Top & Bottom Aligned) -->
+        <section class="contact-right-row contact-notes-row">
+            <div class="ruled-text-box contact-ruled-notes">
+                <div class="contact-note-top">
+                    <p>Allergies and dietary needs<br>Tell us before you arrive, and our team will help you choose.</p>
+                </div>
+                <div class="contact-note-bottom">
+                    <p>Private events and groups<br>Planning a celebration for 12 or more? Tell us the date and group size.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Rule -->
+        <hr class="story-divider">
+
+        <!-- 5. Stacked Interactive Inputs & Inverted Send Button -->
+        <section class="contact-form-section">
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="NAME" class="contact-input-btn" required>
+                <input type="email" name="email" placeholder="EMAIL" class="contact-input-btn" required>
+                <input type="text" name="topic" placeholder="TOPIC" class="contact-input-btn">
+                <textarea name="message" id="contact-message" placeholder="MESSAGE" class="contact-input-btn contact-textarea-btn" rows="1" required></textarea>
+                <button type="submit" class="btn-send-inverted">SEND</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Auto-grow Message Field Only When Text Wraps -->
+    <script>
+        const messageField = document.getElementById('contact-message');
+        messageField.addEventListener('input', function () {
+            if (this.value.trim() === '') {
+                this.style.height = '60px';
+                this.style.lineHeight = '60px';
+                this.style.paddingTop = '0px';
+                this.style.paddingBottom = '0px';
+            } else {
+                this.style.lineHeight = '1.35';
+                this.style.paddingTop = '14px';
+                this.style.paddingBottom = '14px';
+                this.style.height = '60px';
+                this.style.height = Math.max(60, this.scrollHeight) + 'px';
+            }
+        });
+    </script>
+
+</body>
+</html>
